@@ -4,78 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Working with Class sintx</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id="box1"></div>
-  <div id="box2"></div>
-  <div id="circle"></div>
+  <div id="road">
+    <div id="model">
+      <div id="box">
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+      </div>
 
-  <script>
-    'use strict';
-
-    class Component {
-      constructor(selector) {
-        this.$d = document.querySelector(selector);
-      }
-
-      hide() {
-        this.$d.style.display = 'none';
-      }
-
-      show() {
-        this.$d.style.display = 'block';
-      }
-
-    }
-
-    class Box extends Component {
-      constructor(options) {
-        super(options.selector);
-
-        this.$d.style.width = this.$d.style.height = options.size + 'px';
-
-        this.$d.style.background = options.background;
-
-      }
-
-    }
-
-    const box1 = new Box({
-      selector: '#box1',
-      size: 100,
-      background: 'red',
-    });
-
-    const box2 = new Box({
-      selector: '#box2',
-      size: 150,
-      background: 'blue',
-    });
-
-    class Circle extends Box {
-      constructor(options) {
-        super(options);
-
-        this.$d.style.borderRadius = 50 + '%';
-      }
-    }
-
-    const circle = new Circle({
-      selector: '#circle',
-      size: 100,
-      background: 'lime',
-    })
+    </div>
+  </div>
 
 
-
-
-
-
-
-  </script>
+  <script src="app.js"></script>
 </body>
 
 </html>
